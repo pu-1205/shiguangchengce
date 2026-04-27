@@ -5,7 +5,7 @@ import { ArrowLeft, CheckCircle2, BookOpen, Dumbbell, Timer, ChevronRight, Troph
 import { useState } from 'react';
 import { KnowledgeMap } from '../components/KnowledgeMap';
 
-const RUNNING_IDS = ['r1', 'r2', 'r3', 'r4', 'r5', 'r6'];
+const RUNNING_IDS = ['r6', 'r1', 'r2', 'r3', 'r4', 'r5'];
 
 const CARD_ACCENT = [
   { from: 'from-orange-500', to: 'to-red-500', bg: 'bg-orange-50', tag: 'bg-orange-100 text-orange-600' },
@@ -32,7 +32,7 @@ export function RunningFolder() {
   const { videos, cards } = useAppContext();
   const navigate = useNavigate();
   const [showMap, setShowMap] = useState(false);
-  const [mapCenterId, setMapCenterId] = useState('r1');
+  const [mapCenterId, setMapCenterId] = useState('r6');
 
   const runningVideos = RUNNING_IDS.map(id => videos.find(v => v.video_id === id)).filter(Boolean);
   const runningCards = RUNNING_IDS.map(id => cards[id]).filter(Boolean);
@@ -68,7 +68,7 @@ export function RunningFolder() {
 
           <motion.button
             whileTap={{ scale: 0.9 }}
-            onClick={() => { setMapCenterId('r1'); setShowMap(true); }}
+            onClick={() => { setMapCenterId('r6'); setShowMap(true); }}
             className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center"
           >
             <GitBranch className="w-[18px] h-[18px] text-white" />

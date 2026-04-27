@@ -12,12 +12,12 @@ interface KnowledgeMapProps {
 
 // Define connections between cards
 const CONNECTIONS: Record<string, string[]> = {
-  r1: ['r2', 'r3', 'r4'],       // 5km入门 → 呼吸、跑姿、热身
-  r2: ['r1', 'r3', 'r5'],       // 呼吸 → 入门、跑姿、马拉松
-  r3: ['r1', 'r4', 'r5'],       // 跑姿 → 入门、热身、马拉松
-  r4: ['r1', 'r3'],             // 热身 → 入门、跑姿
-  r5: ['r2', 'r3'],             // 马拉松 → 呼吸、跑姿
-  r6: ['r1', 'r3', 'r4'],       // 跑姿细节 → 入门、跑姿、热身
+  r1: ['r2', 'r3', 'r4'],       // 零基础开跑 → 送髋入门、跑姿理念、慢跑送髋
+  r2: ['r1', 'r3', 'r5'],       // 送髋入门 → 开跑、跑姿理念、马拉松
+  r3: ['r1', 'r4', 'r5'],       // 跑姿理念 → 开跑、慢跑送髋、马拉松
+  r4: ['r1', 'r3'],             // 慢跑送髋 → 开跑、跑姿理念
+  r5: ['r2', 'r3'],             // 马拉松 → 送髋、跑姿理念
+  r6: ['r1', 'r3', 'r4'],       // 跑姿细节 → 开跑、跑姿理念、慢跑送髋
 };
 
 const NODE_COLORS: Record<string, { bg: string; border: string; glow: string }> = {
@@ -30,10 +30,10 @@ const NODE_COLORS: Record<string, { bg: string; border: string; glow: string }> 
 };
 
 const SHORT_LABELS: Record<string, string> = {
-  r1: '5km入门',
-  r2: '呼吸法',
-  r3: '正确跑姿',
-  r4: '跑前热身',
+  r1: '零基础开跑',
+  r2: '送髋入门',
+  r3: '跑姿理念',
+  r4: '慢跑送髋',
   r5: '马拉松备赛',
   r6: '跑姿细节',
 };

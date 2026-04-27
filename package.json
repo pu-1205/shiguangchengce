@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "dev": "vite"
+    "dev": "vite",
+    "copy-covers": "node scripts/copy-running-covers.mjs"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
